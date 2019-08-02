@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=UTF-8">
+    <title>Test</title>
+    <style>
+    .container {
+            margin: 0 auto;
+            padding: 50px;
+            width: 50%;
+        }
+    #main, #custom-form {
+        width: 100%;
+        padding: 50px;
+        display: inline-block;
+        border: 1px solid grey;
+        border-radius: 6px;
+        margin-bottom: 25px;
+    }
+
+    ul {
+        list-style: none;
+    }
+    li {
+        background-color: wheat;
+        padding: 3px;
+        margin: 3px;
+        border-radius: 6px;
+    }
+
+li.important {
+    background: purple;
+}
+    .form-group {
+        margin: 25px;
+    }
+    textarea {
+        resize: none;
+    }
+    textarea, input {
+        margin: 5px;
+        border-radius: 6px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+	<div id="main">
+
+                <h1>Here is our JSON data:</h1>
+                <button id="type">Sort by type</button>	
+                <button id="name">Sort by name</button>		
+                <ul id='list'><ul>
+    </div>
+    <div id="custom-form">
+        <h1>AJAX form</h1>
+            <form action="#" method="POST" id="test-form">
+                    <div class="form-group">
+                        <label for="name"></label>
+                            <input id="name" name="name" type="text" placeholder="Your name" pattern="^[A-Za-z ]{2,35}$" required><br>
+                            
+                    </div>
+                    <div class="form-group">
+                        <label for="email"></label>
+                            <input id="email" name="email" type="text" placeholder="Your e-mail" pattern="^(.+)@(.+){2,}\.(.+){2,}$"
+                                required><br>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Your gender:</label><br>
+                            <input type="radio" name="gender" value="male"> Male<br>
+                            <input type="radio" name="gender" value="female"> Female<br>
+                            <input type="radio" name="gender" value="other"> Other
+
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle">What vehicle do you use:</label><br>
+                        <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+                        <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+                        <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br>
+                    </div>
+                    <div class="form-group">
+                        <label for="sources">How do you prefer to learn new things?</label><br>
+                            <select id="dropdown">
+                                <option value="books">Books</option>
+                                <option value="online">Online courses</option>
+                                <option value="classes">Attending classes</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message:</label><br>
+                            <textarea id="message" name="message" rows="4" cols="22"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="avatar">Choose a profile picture:</label>
+                        <input type="file"
+                                   id="avatar" name="avatar"
+                                   accept="image/png, image/jpeg">
+                    </div>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+                <hr>
+                <div id="demo">
+                    <h2>User inputs:</h2>
+                </div>
+                  </div>
+</div>
+<script src="functions.js"></script>
+</body>
+</html>
